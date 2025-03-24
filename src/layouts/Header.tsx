@@ -9,25 +9,24 @@ const HeaderContainer = styled.header`
 `
 
 const Logo = styled.div`
-  ${tw`relative flex justify-center items-center gap-4 top-[0px] left-[-12px]`}
+  ${tw`relative flex justify-center items-center gap-4 top-[-1px] left-[1px]`}
 
-  img { ${tw`w-[290px] h-[71px]`} }
+  img { ${tw`w-[264px] h-auto`} }
 `
 
 const NavMenu = styled.nav`
-  ${tw`flex justify-between items-center gap-[20px]`}${tw`relative top-[-4px] left-[69.5px] min-w-[500px]`}
+  ${tw`flex justify-between items-center`}${tw`relative top-[-6px] left-[66.5px] min-w-[525px]`}
 	ul {
-		${tw`flex w-full justify-around font-semibold list-none`}
+		${tw`flex w-full justify-around font-medium list-none`}
 		li a {
 			${tw`relative leading-4 tracking-[0.12rem] text-[#8B8B8B] text-[1rem] no-underline`}
-			&:hover { ${tw`text-[#FF64AE]`} }
 			&.active { ${tw`text-[#414880]`} }
 		}
 		li a.service { ${tw`-left-0.5`} }
 	}
 `
 const ContactButton = styled(Link)`
-  ${tw`relative top-[10px] left-[60px] font-semibold cursor-pointer rounded-full tracking-[0.12rem] w-[210px] h-[68px] text-white bg-[#FF64AE] text-[1.3rem] flex items-center justify-center`}
+  ${tw`relative top-[-6px] left-[-6px] font-semibold cursor-pointer rounded-full tracking-[0.12rem] w-[158px] h-[52px] text-white bg-[#FF64AE] text-[1rem] flex items-center justify-center`}
 `
 
 

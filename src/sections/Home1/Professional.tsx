@@ -21,72 +21,90 @@ const teamData: TeamMember[] = [
         id: 1,
         name: "Briyan Nevalli",
         role: "Surgeon",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit.",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit",
         image: img1,
         socials: [twitterIcon, facebookIcon, instagramIcon],
     }, {
         id: 2,
         name: "Bella Sebastian",
         role: "Dermatologist",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit.",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit",
         image: img2,
         socials: [twitterIcon, facebookIcon, instagramIcon],
     }, {
         id: 3,
         name: "Lilly Adams",
         role: "Stylist expert",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit.",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit",
         image: img3,
         socials: [twitterIcon, facebookIcon, instagramIcon],
     },
 ]
 
 const ProfessionalSection = styled.section`
-    ${tw`flex flex-col items-center justify-center h-screen`}   
+    ${tw`relative text-center top-[-271px] z-20 py-[100px] px-0`}   
 `
 
 const TitleWrapper = styled.div`
-    ${tw`flex flex-col justify-center items-center`}
+    ${tw`mb-[50px]`}
 `
 
 const Subtitle = styled.h2`
-    ${tw`text-lg font-semibold`}
+${tw`text-[15.8px] font-semibold text-[#FF64AE] mb-[16px] leading-[1rem] tracking-[0.01rem]`}
 `
 
 const Heading = styled.h1`
-    ${tw`text-3xl font-semibold`}
+    ${tw`text-[36px] font-semibold text-[#091156] mb-[21px]  leading-[2.7rem]`}
 `
 
 const Description = styled.p`
-    ${tw`text-lg text-center mt-4`}
+    ${tw`text-[16px] font-medium text-[#8B8B8B] tracking-[0.094rem] leading-[1.5rem] max-w-[839px] mx-auto my-0`}
+
 `
 
 const BoxesWrapper = styled.div`
-    ${tw`flex justify-center items-center`}
+	${tw`relative flex items-center justify-between z-10 gap-[3.5rem] top-[137px]`}
+	padding: 0 152px;
+	grid-template-columns: repeat(3, 1fr);
 `
 
-const ProfessionalBox = styled.div`
-    ${tw`flex flex-col items-center gap-5`}
-`
+const ProfessionalBox = styled.div<{ index: number }>`
+  ${tw`relative z-10 w-[510px] rounded-[40px] shadow-none flex-1`}
+  ${({ index }) =>
+    index === 1
+      ? tw`w-[570px] z-20 bg-white shadow-[10px 13px 80px 14px #F2F4FF]`
+      : index === 0
+      ? tw`left-[-10px]`
+      : index === 2
+      ? tw`right-[-10px]`
+      : tw`relative`}
+`;
 
 const ProfessionalImage = styled.img`
-    ${tw`w-40 h-40 rounded-full`}
+    ${tw`block mt-[17px] mx-auto w-[146px] h-[146px] mb-[3.3rem]`}
+
 `
 
 const ProfessionalRole = styled.h3`
-    ${tw`text-xl font-semibold`}
+    ${tw`text-[16px] font-semibold text-[#ff64ae] mb-[9px]`}
+
 `
 
 const ProfessionalName = styled.h4`
-    ${tw`text-lg font-semibold`}
+    ${tw`text-[1.125rem] leading-[1.75rem] font-semibold text-[#091156] mb-[18px]`}
 `
 
 const ProfessionalDesc = styled.p`
-    ${tw`text-lg text-center`}
+    ${tw`w-[83%] text-[13.5px] font-normal text-[#8B8B8B] leading-[1.3rem] tracking-[0.1rem] mb-[40px]`}
+    margin-left: auto;
+    margin-right: auto;
+
 `
 
 const SocialsWrapper = styled.div`
-    ${tw`flex gap-3`}
+    ${tw`flex w-[73%] gap-[3px]`}
+    margin-left: auto;
+    margin-right: auto;
 `
 
 const SocialIcon = styled.img`
@@ -104,8 +122,8 @@ const Professional: React.FC = () => {
                 </Description>
             </TitleWrapper>
             <BoxesWrapper>
-                {teamData.map((member) => (
-                    <ProfessionalBox key={member.id}>
+                {teamData.map((member, index) => (
+                    <ProfessionalBox key={member.id} index={index}>
                         <ProfessionalImage src={member.image} alt={member.name} />
                         <ProfessionalRole>{member.role}</ProfessionalRole> 
                         <ProfessionalName>{member.name}</ProfessionalName>

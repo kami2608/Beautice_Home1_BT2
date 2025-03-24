@@ -22,7 +22,7 @@ const serviceData: Service[] = [
         id: 2,
 		image: img2,
 		title: "Skin treatments",
-		description: "Non pimgurient amet, feugiat tellus sagittis, scelerisque eget nulla turpis.",
+		description: "Non parturient amet, feugiat tellus sagittis, scelerisque eget nulla turpis.",
 	}, {
 		id: 3,
 		image: img3,
@@ -32,43 +32,53 @@ const serviceData: Service[] = [
 ]
 
 const ServicesSection = styled.div`
-    ${tw`flex flex-col items-center justify-center h-screen`}
+	${tw`relative text-center top-[173px] z-20 py-[100px] px-0`}
+
 `
 
 const TitleWrapper = styled.div`
-    ${tw`flex flex-col justify-center items-center`}
+	${tw`mb-[50px]`}
 `
 
 const Heading = styled.h1`
-    ${tw`text-3xl font-semibold`}
+	${tw`text-[36px] font-semibold text-[#091156] mb-[21px]  leading-[2.7rem]`}
+
 `
 
 const Subtitle = styled.h2`
-    ${tw`text-lg font-semibold`}
+	${tw`text-[15.8px] font-semibold text-[#FF64AE] mb-[16px] leading-[1rem] tracking-[0.01rem]`}
+
 `
 
 const Description = styled.p`
-    ${tw`text-lg text-center mt-4`}
+	${tw`text-[16px] font-medium text-[#8B8B8B] tracking-[0.094rem] leading-[1.5rem] max-w-[839px] mx-auto my-0`}
+
 `
 
 const BoxesWrapper = styled.div`
-    ${tw`flex justify-center items-center`}
+	${tw`relative flex items-center justify-between z-10 gap-[3.5rem] top-[36px]`}
+	padding: 0 152px;
+	grid-template-columns: repeat(3, 1fr);
 `
 
 const ServiceBox = styled.div`
-    ${tw`flex flex-col items-center gap-5`}
+	${tw`relative flex-1 text-center p-[41px] max-w-[500px] bg-white rounded-[40px]`}
+	box-shadow: 0px 25px 50px 25px #F6F7FF;
 `
 
 const ServiceImage = styled.img`
-    ${tw`w-40 h-40 object-cover rounded-full`}
+	${tw`block mt-[17px] mx-auto w-[167px] h-[167px] mb-[3.4rem]`}
+
 `
 
 const ServiceTitle = styled.h3`
-    ${tw`text-xl font-semibold`}
+	${tw`text-[18px] font-semibold text-[#091156] mb-[18px]`}
+
 `
 
 const ServiceDescription = styled.p`
-    ${tw`text-lg text-center`}
+	${tw`text-[13.5px] font-normal text-[#8B8B8B] leading-[1.3rem] tracking-[0.1rem] mb-[2rem]`}
+
 `
 
 
@@ -79,7 +89,7 @@ const Services: React.FC = () => {
             <TitleWrapper>
                 <Subtitle>Main Services</Subtitle>
                 <Heading>
-                    Learn services to focus on your beauty
+                    Learn services to focus <br/> on your beauty
                 </Heading>
                 <Description>
                 Porta rhoncus orci condimentum vitae lobortis eu dignissim non massa.

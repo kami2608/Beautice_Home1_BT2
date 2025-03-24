@@ -2,21 +2,26 @@ import Header from "../layouts/Header"
 import tw from "twin.macro"
 import styled from "@emotion/styled"
 import Footer from "../layouts/Footer"
-import Hero from "../components/sections/Hero"
-import Services from "../components/sections/Services"
-import About from "../components/sections/About"
-import Professional from "../components/sections/Professional"
-import Contact from "../components/sections/Contact"
+import Hero from "../sections/Home1/Hero"
+import Services from "../sections/Home1/Services"
+import About from "../sections/Home1/About"
+import Professional from "../sections/Home1/Professional"
+import Contact from "../sections/Home1/Contact"
 import SlideButton from "../components/SlideButton"
+import bubbleBg from "../assets/Background Bubble.png"
+import ToTopBtn from "../components/ToTopBtn"
 
 const HomeContainer = styled.div`
-  ${tw`flex flex-col items-center justify-center`}
+	${tw`relative`}
 `
 
 const HeaderHeroContainer = styled.div`
-  ${tw`w-full`}
+	${tw`relative`}
 `
 
+const BubbleBackground = styled.img`
+	${tw`absolute bottom-[920px] left-0 z-0`}
+`
 
 
 const Home1: React.FC = () => {
@@ -30,8 +35,10 @@ const Home1: React.FC = () => {
             <Services/>
             <About/>
             <Professional/>
+            <BubbleBackground src={bubbleBg} alt="Home1 contact bg"/>
             <Contact/>
             <Footer/>
+            <ToTopBtn/>
         </HomeContainer>
     )
 }
