@@ -10,10 +10,32 @@ const AboutSection = styled.section`
 	background-repeat: no-repeat;
 	background-position: top right;
 	background-size: 65%;
+
 `
 
 const ContentWrapper = styled.div`
 	${tw`flex items-center gap-[2.5rem] mt-[114px] z-10`}
+
+    
+    @media (max-width: 600px) {
+        ${tw`flex-col`}
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+        ${tw`flex-col`}
+    }
+
+    @media (min-width: 900px) and (max-width: 1100px) {
+        ${tw`flex-col`}
+    }
+
+    @media (min-width: 1100px) and (max-width: 1300px) {
+
+    }
+
+    @media (min-width: 1536px) {
+
+    }
 `
 
 const TextSection = styled.div`
@@ -26,6 +48,27 @@ const ImageWrapper = styled.div`
         ${tw`object-cover w-[120%] max-w-[663px] max-h-[500px] rounded-[60px]`}
         margin-top: 40px;
         margin-right: -75px;
+    }
+        
+    @media (max-width: 600px) {
+        ${tw`w-full`}
+        margin-right: 0px;
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+        margin-right: 0px;
+    }
+
+    @media (min-width: 900px) and (max-width: 1100px) {
+        margin-right: 0px;
+    }
+
+    @media (min-width: 1100px) and (max-width: 1300px) {
+
+    }
+
+    @media (min-width: 1536px) {
+
     }
 `
 

@@ -9,10 +9,58 @@ const HeroSection = styled.section`
     padding-left: 12.5%;
     padding-right: 10.5%;
 
+    @media (max-width: 600px) {
+        ${tw`flex-col items-center gap-[30px]`}
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+        ${tw`flex-col items-center gap-[30px]`}
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    @media (min-width: 900px) and (max-width: 1100px) {
+        ${tw`flex-col items-center gap-[30px]`}
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    @media (min-width: 1100px) and (max-width: 1300px) {
+        ${tw`w-[90%] h-[200px] gap-[5%]`}
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    @media (min-width: 1536px) {
+        ${tw`w-[90%]`}
+    }
+
 `
 
 const ContentWrapper = styled.div`
 	${tw`w-1/2 font-semibold text-left`}
+
+    @media (max-width: 600px) {
+        ${tw`w-full`}
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+        ${tw`w-full`}
+    }
+
+    @media (min-width: 900px) and (max-width: 1100px) {
+        ${tw`w-full`}
+    }
+
+    @media (min-width: 1100px) and (max-width: 1300px) {
+        ${tw`w-full`}
+    }
+
+    @media (min-width: 1536px) {
+
+    }
 `
 const ImageWrapper = styled.div`
 	${tw`relative top-0 right-[0.4rem] w-3/5 text-right`}

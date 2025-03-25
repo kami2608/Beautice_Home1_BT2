@@ -11,11 +11,17 @@ const ToTopButton = styled.div<ToTopButtonProps>(({ $isVisible }) => [
     tw`fixed flex justify-end cursor-pointer opacity-0 invisible transition-all duration-300 z-30 bottom-[172px] right-[66px]`,
     $isVisible && tw`visible opacity-100`,
     `
-    (max-width: 1440px) {
-        bottom: 172px;
+	@media (max-width: 1440px) {
+		bottom: 170px;
 		right: 66px;
 		width: 36px;
 		height: 36px;
+	}
+	@media (max-width: 768px) {
+		right: 70px;
+	}
+	@media (max-width: 480px) {
+		right: 20px;
 	}
     `
 ]);

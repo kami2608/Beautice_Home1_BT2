@@ -10,6 +10,23 @@ const ContactSection = styled.section`
 
 const Container = styled.div`
 	${tw`flex justify-between items-center gap-[1.25rem]`}
+    @media (max-width: 600px) {
+        ${tw`flex-col-reverse`}
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+        ${tw`flex-col-reverse`}
+    }
+
+    @media (min-width: 900px) and (max-width: 1100px) {
+        ${tw`flex-col-reverse`}
+    }
+
+    @media (min-width: 1100px) and (max-width: 1300px) {
+
+    }
+
+
 `
 
 const ContactImg = styled.div`
@@ -18,6 +35,26 @@ const ContactImg = styled.div`
 	img {
 		${tw`w-[86.5%] h-auto`}
 	}
+
+    @media (max-width: 600px) {
+        ${tw`w-full`}
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+        ${tw`w-full`}
+    }
+
+    @media (min-width: 900px) and (max-width: 1100px) {
+        ${tw`w-full`}
+    }
+
+    @media (min-width: 1100px) and (max-width: 1300px) {
+        ${tw`w-full`}
+    }
+
+    @media (min-width: 1536px) {
+
+    }
 `
 
 const FormContainer = styled.div`

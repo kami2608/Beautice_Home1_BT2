@@ -60,12 +60,54 @@ const Heading = styled.h1`
 const Description = styled.p`
     ${tw`text-[16px] font-medium text-[#8B8B8B] tracking-[0.094rem] leading-[1.5rem] max-w-[839px] mx-auto my-0`}
 
+    @media (max-width: 600px) {
+        ${tw`w-[80%]`}
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+        ${tw`w-[80%]`}
+    }
+
+    @media (min-width: 900px) and (max-width: 1100px) {
+        ${tw`w-[80%]`}
+    }
+
+    @media (min-width: 1100px) and (max-width: 1300px) {
+
+    }
+
+    @media (min-width: 1536px) {
+
+    }
+
 `
 
 const BoxesWrapper = styled.div`
 	${tw`relative flex items-center justify-between z-10 gap-[3.5rem] top-[137px]`}
 	padding: 0 152px;
 	grid-template-columns: repeat(3, 1fr);
+    @media (max-width: 600px) {
+        ${tw`flex-col`}
+        padding: 0 15%;
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+        ${tw`flex-col`}
+        padding: 0 15%;
+    }
+
+    @media (min-width: 900px) and (max-width: 1100px) {
+        ${tw`flex-col`}
+        padding: 0 15%;
+    }
+
+    @media (min-width: 1100px) and (max-width: 1300px) {
+
+    }
+
+    @media (min-width: 1536px) {
+        padding: 0 20%;
+    }
 `
 
 const ProfessionalBox = styled.div<{ index: number }>`
@@ -78,6 +120,18 @@ const ProfessionalBox = styled.div<{ index: number }>`
       : index === 2
       ? tw`right-[-10px]`
       : tw`relative`}
+
+    @media (max-width: 600px) {
+        ${tw`w-[90%]`}
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+        ${tw`w-[90%]`}
+    }
+
+    @media (min-width: 900px) and (max-width: 1100px) {
+        ${tw`w-[80%]`}
+    }
 `;
 
 const ProfessionalImage = styled.img`
@@ -105,6 +159,18 @@ const SocialsWrapper = styled.div`
     ${tw`flex w-[73%] gap-[3px]`}
     margin-left: auto;
     margin-right: auto;
+
+    @media (min-width: 600px) and (max-width: 900px) {
+        ${tw`w-[50%]`}
+    }
+
+    @media (min-width: 900px) and (max-width: 1100px) {
+        ${tw`w-[50%]`}
+    }
+
+    @media (min-width: 1100px) and (max-width: 1300px) {
+        ${tw`w-[90%]`}
+    }
 `
 
 const SocialIcon = styled.img`
