@@ -42,7 +42,26 @@ const teamData: TeamMember[] = [
 ]
 
 const ProfessionalSection = styled.section`
-    ${tw`relative text-center top-[-271px] z-20 py-[100px] px-0`}   
+    ${tw`relative text-center top-[-392px] z-20 py-[100px] px-0`} 
+
+    @media (max-width: 1900px) {
+        ${tw`top-[-135px]`}
+    }
+    @media (width: 1440px) {
+    ${tw`top-[-392px]`}
+    }
+    @media (max-width: 1300px) {
+        ${tw`top-[-300px]`}
+    }
+    @media (max-width: 1024px) {
+		${tw`top-[160px] py-[80px] px-[10px]`}
+	}
+	@media (max-width: 768px) {
+		${tw`top-[170px] py-[60px] px-[15px]`}
+	}
+	@media (max-width: 480px) {
+		${tw`py-10 px-[10px]`}
+	}  
 `
 
 const TitleWrapper = styled.div`
@@ -51,34 +70,39 @@ const TitleWrapper = styled.div`
 
 const Subtitle = styled.h2`
 ${tw`text-[15.8px] font-semibold text-[#FF64AE] mb-[16px] leading-[1rem] tracking-[0.01rem]`}
+	@media (max-width: 1024px) {
+		${tw`mb-4`}
+	}
+	@media (max-width: 768px) {
+		${tw`text-[14px] mb-3`}
+	}
 `
 
 const Heading = styled.h1`
     ${tw`text-[36px] font-semibold text-[#091156] mb-[21px]  leading-[2.7rem]`}
+    @media (max-width: 1024px) {
+		${tw`text-[34px] leading-[50px]`}
+	}
+	@media (max-width: 768px) {
+		${tw`text-[32px] leading-[45px] mb-[18px]`}
+	}
+	@media (max-width: 480px) {
+		${tw`text-[26px] leading-[38px] mb-[14px]`}
+	}
 `
 
 const Description = styled.p`
     ${tw`text-[16px] font-medium text-[#8B8B8B] tracking-[0.094rem] leading-[1.5rem] max-w-[839px] mx-auto my-0`}
 
-    @media (max-width: 600px) {
-        ${tw`w-[80%]`}
-    }
-
-    @media (min-width: 600px) and (max-width: 900px) {
-        ${tw`w-[80%]`}
-    }
-
-    @media (min-width: 900px) and (max-width: 1100px) {
-        ${tw`w-[80%]`}
-    }
-
-    @media (min-width: 1100px) and (max-width: 1300px) {
-
-    }
-
-    @media (min-width: 1536px) {
-
-    }
+    @media (max-width: 1024px) {
+		${tw`tracking-[0.1rem] max-w-[800px]`}
+	}
+	@media (max-width: 768px) {
+		${tw`text-[16px] leading-6 tracking-[0.08rem] max-w-[600px]`}
+	}
+	@media (max-width: 480px) {
+		${tw`text-[14px] leading-5 tracking-[0.05rem] max-w-full`}
+	}
 
 `
 
@@ -86,28 +110,19 @@ const BoxesWrapper = styled.div`
 	${tw`relative flex items-center justify-between z-10 gap-[3.5rem] top-[137px]`}
 	padding: 0 152px;
 	grid-template-columns: repeat(3, 1fr);
-    @media (max-width: 600px) {
-        ${tw`flex-col`}
-        padding: 0 15%;
-    }
+    @media (max-width: 1130px) {
+		${tw`pb-[120px] px-[50px]`}
+	}
+	@media (max-width: 860px) {
+		${tw`px-[20px] gap-[20px]`}
+	}
+	@media (max-width: 768px) {
+		${tw`flex-col items-center py-0 px-[30px]`}
+	}
+	@media (max-width: 480px) {
+		${tw`gap-[15px] py-0 px-[15px]`}
+	}
 
-    @media (min-width: 600px) and (max-width: 900px) {
-        ${tw`flex-col`}
-        padding: 0 15%;
-    }
-
-    @media (min-width: 900px) and (max-width: 1100px) {
-        ${tw`flex-col`}
-        padding: 0 15%;
-    }
-
-    @media (min-width: 1100px) and (max-width: 1300px) {
-
-    }
-
-    @media (min-width: 1536px) {
-        padding: 0 20%;
-    }
 `
 
 const ProfessionalBox = styled.div<{ index: number }>`
@@ -121,37 +136,87 @@ const ProfessionalBox = styled.div<{ index: number }>`
       ? tw`right-[-10px]`
       : tw`relative`}
 
-    @media (max-width: 600px) {
-        ${tw`w-[90%]`}
-    }
-
-    @media (min-width: 600px) and (max-width: 900px) {
-        ${tw`w-[90%]`}
-    }
-
-    @media (min-width: 900px) and (max-width: 1100px) {
-        ${tw`w-[80%]`}
-    }
+    @media (max-width: 860px) {
+		${tw`p-[25px]`}
+	}
+	@media (max-width: 768px) {
+		${tw`p-[40px] max-w-full`}
+	}
+	@media (max-width: 480px) {
+		${tw`p-[30px]`}
+	}
 `;
 
 const ProfessionalImage = styled.img`
     ${tw`block mt-[17px] mx-auto w-[146px] h-[146px] mb-[3.3rem]`}
+
+    @media (max-width: 1024px) {
+		${tw`w-[160px] h-[160px] mt-0 mb-[20px]`}
+	}
+	@media (max-width: 860px) {
+		${tw`w-[150px] h-[150px]`}
+	}
+	@media (max-width: 768px) {
+		${tw`w-[164px] h-[164px] mb-4`}
+	}
+	@media (max-width: 480px) {
+		${tw`w-[120px] h-[120px] mb-[10px]`}
+	}
 
 `
 
 const ProfessionalRole = styled.h3`
     ${tw`text-[16px] font-semibold text-[#ff64ae] mb-[9px]`}
 
+    @media (max-width: 1024px) {
+		${tw`text-[15px] mb-[16px]`}
+	}
+	@media (max-width: 860px) {
+		${tw`text-[14px] mb-[15px]`}
+	}
+	@media (max-width: 768px) {
+		${tw`text-[20px] mb-[15px]`}
+	}
+	@media (max-width: 480px) {
+		${tw`text-[18px] mb-[10px]`}
+	}
+
 `
 
 const ProfessionalName = styled.h4`
     ${tw`text-[1.125rem] leading-[1.75rem] font-semibold text-[#091156] mb-[18px]`}
+
+    @media (max-width: 1024px) {
+		${tw`text-[15px] mb-[16px]`}
+	}
+	@media (max-width: 860px) {
+		${tw`text-[14px] mb-[15px]`}
+	}
+	@media (max-width: 768px) {
+		${tw`text-[20px] mb-[15px]`}
+	}
+	@media (max-width: 480px) {
+		${tw`text-[18px] mb-[10px]`}
+	}
 `
 
 const ProfessionalDesc = styled.p`
     ${tw`w-[83%] text-[13.5px] font-normal text-[#8B8B8B] leading-[1.3rem] tracking-[0.1rem] mb-[40px]`}
     margin-left: auto;
     margin-right: auto;
+
+    @media (max-width: 1024px) {
+		${tw`text-[12px] leading-[20px] mb-5`}
+	}
+	@media (max-width: 860px) {
+		${tw`leading-[18px]`}
+	}
+	@media (max-width: 768px) {
+		${tw`text-[16px] leading-6 mb-[15px]`}
+	}
+	@media (max-width: 480px) {
+		${tw`text-[14px] leading-5 mb-2.5`}
+	}
 
 `
 
@@ -160,21 +225,21 @@ const SocialsWrapper = styled.div`
     margin-left: auto;
     margin-right: auto;
 
-    @media (min-width: 600px) and (max-width: 900px) {
-        ${tw`w-[50%]`}
+    @media (max-width: 1280px) {
+    ${tw`w-full gap-0`}
+    }
+    @media (max-width: 770px) {
+        ${tw`w-[65%]`}
     }
 
-    @media (min-width: 900px) and (max-width: 1100px) {
-        ${tw`w-[50%]`}
-    }
 
-    @media (min-width: 1100px) and (max-width: 1300px) {
-        ${tw`w-[90%]`}
-    }
 `
 
 const SocialIcon = styled.img`
     ${tw`h-20`}
+    @media (max-width: 770px) {
+        ${tw`max-w-[35%]`}
+    }
 `
 
 const Professional: React.FC = () => {

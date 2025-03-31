@@ -3,9 +3,12 @@ import styled from "@emotion/styled"
 
 const SlideButtonContainer = styled.div`
 	${tw`flex justify-center items-center relative transform translate-y-[15.6rem] gap-[0.6rem]`}
-    @media (max-width: 1440px) {
-        top: -110px;
-    }
+	@media (max-width: 1440px) {
+		${tw`transform translate-y-[6.9rem] gap-[0.5rem]`}
+	}
+	@media (max-width: 768px) {
+		${tw`relative translate-y-0 mt-4 justify-center`}
+	}
 
 `
 
