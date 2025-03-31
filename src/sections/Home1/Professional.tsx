@@ -226,10 +226,12 @@ const SocialsWrapper = styled.div`
     margin-right: auto;
     margin-bottom: 76px;
 
-    @media (min-width: 1441px) and (max-width: 2560px) {
-        ${tw`w-[33%]`}
+    @media (min-width: 2000px) and (max-width: 2560px) {
+        ${tw`w-[45%] gap-[10px]`}
     }
-    @media (max-width: 1440px) {
+
+    @media (min-width: 1600px) and (max-width: 1999px) {
+        ${tw`w-[63%] gap-[20px]`}
     }
 
     @media (max-width: 1280px) {
