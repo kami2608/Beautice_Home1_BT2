@@ -6,6 +6,9 @@ import ContactInputBox from "../../components/ContactInputBox";
 
 const ContactSection = styled.section`
 	${tw`relative -top-[5px] py-[150px] px-[10%]`}
+	@media (max-width: 2600px) {
+		${tw`py-[250px]`}
+	}
 	@media (max-width: 1770px) {
 		${tw`-mb-[100px]`}
 	}
@@ -16,7 +19,7 @@ const ContactSection = styled.section`
 		${tw`-mb-[300px]`}
 	}
 	@media (max-width: 1440px) {
-		${tw`py-[120px] px-[5%] -top-[336px] mb-[4px]`}
+		${tw`py-[120px] px-[5%] -top-[268px] mb-[6px]`}
 	}
 	@media (max-width: 1280px) {
 		${tw`py-[100px] px-[5%] -top-[200px] -mb-[300px]`}
@@ -28,13 +31,13 @@ const ContactSection = styled.section`
 		${tw`-top-[40px] mb-0`}
 	}
 	@media (max-width: 1024px) {
-		${tw`-top-[20px]`}
+		${tw`-top-[300px]`}
 	}
 	@media (max-width: 768px) {
-		${tw`py-[80px] px-[5%] top-[100px]`}
+		${tw`py-[80px] px-[5%] top-[0]`}
 	}
 	@media (max-width: 480px) {
-		${tw`py-[50px] px-[2%] top-[200px]`}
+		${tw`py-[50px] px-[2%] top-[-45px]`}
 	}
 
 

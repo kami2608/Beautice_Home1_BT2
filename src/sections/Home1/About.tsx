@@ -11,7 +11,7 @@ const AboutSection = styled.section`
 	background-position: top right;
 	background-size: 65%;
 	@media (max-width: 1440px) {
-		${tw`-top-[213px] mb-[1px]`}
+		${tw`-top-[148px] mb-[1px]`}
 	}
 	@media (max-width: 1024px) {
 		${tw`flex-col text-center top-20 py-[100px] px-[8%]`}
@@ -29,7 +29,7 @@ const AboutSection = styled.section`
 const ContentWrapper = styled.div`
 	${tw`flex items-center gap-10 mt-[323px] z-10`}
 	@media (max-width: 1440px) {
-		${tw`mt-[202px] gap-[40px]`}
+		${tw`mt-[135px] gap-[40px]`}
 	}
 	@media (max-width: 1024px) {
 		${tw`flex-col mt-[50px] gap-[30px]`}
@@ -48,26 +48,13 @@ const ImageWrapper = styled.div`
         margin-right: -75px;
     }
         
-    @media (max-width: 600px) {
-        ${tw`w-full`}
-        margin-right: 0px;
+    @media (max-width: 1300px) {
+        img {
+            ${tw`w-full`}
+            margin-right: 0px;
+        }
     }
 
-    @media (min-width: 600px) and (max-width: 900px) {
-        margin-right: 0px;
-    }
-
-    @media (min-width: 900px) and (max-width: 1100px) {
-        margin-right: 0px;
-    }
-
-    @media (min-width: 1100px) and (max-width: 1300px) {
-
-    }
-
-    @media (min-width: 1536px) {
-
-    }
 `
 
 const Subtitle = styled.h2`

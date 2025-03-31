@@ -21,7 +21,7 @@ const ToTopButton = styled.div<ToTopButtonProps>(({ $isVisible }) => [
 		right: 70px;
 	}
 	@media (max-width: 480px) {
-		right: 85px;
+		right: 50px;
 	}
     `
 ]);

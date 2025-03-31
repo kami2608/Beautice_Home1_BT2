@@ -42,19 +42,19 @@ const teamData: TeamMember[] = [
 ]
 
 const ProfessionalSection = styled.section`
-    ${tw`relative text-center top-[-392px] z-20 py-[100px] px-0`} 
+    ${tw`relative text-center top-[-392px] z-20 pt-[100px] mb-[-52px] px-0`} 
 
-    @media (max-width: 1900px) {
-        ${tw`top-[-135px]`}
+    @media (max-width: 2600px) {
+        ${tw`top-[-100px]`}
     }
     @media (width: 1440px) {
-    ${tw`top-[-392px]`}
+    ${tw`top-[-325px]`}
     }
     @media (max-width: 1300px) {
         ${tw`top-[-300px]`}
     }
     @media (max-width: 1024px) {
-		${tw`top-[160px] py-[80px] px-[10px]`}
+		${tw`top-0 py-[80px] px-[10px]`}
 	}
 	@media (max-width: 768px) {
 		${tw`top-[170px] py-[60px] px-[15px]`}
@@ -107,8 +107,8 @@ const Description = styled.p`
 `
 
 const BoxesWrapper = styled.div`
-	${tw`relative flex items-center justify-between z-10 gap-[3.5rem] top-[137px]`}
-	padding: 0 152px;
+	${tw`relative flex items-center justify-between z-10 top-[62px]`}
+	padding: 0 140px;
 	grid-template-columns: repeat(3, 1fr);
     @media (max-width: 1130px) {
 		${tw`pb-[120px] px-[50px]`}
@@ -126,14 +126,14 @@ const BoxesWrapper = styled.div`
 `
 
 const ProfessionalBox = styled.div<{ index: number }>`
-  ${tw`relative z-10 w-[510px] rounded-[40px] shadow-none flex-1`}
+  ${tw`relative z-10 w-[510px] rounded-[40px] shadow-none flex-1 flex flex-col items-center justify-center`}
   ${({ index }) =>
     index === 1
-      ? tw`w-[570px] z-20 bg-white shadow-[10px 13px 80px 14px #F2F4FF]`
+      ? tw`w-[570px] z-20 bg-white shadow-[10px 13px 80px 14px #F2F4FF] px-[26px]`
       : index === 0
-      ? tw`left-[-10px]`
+      ? tw`left-[-11px]`
       : index === 2
-      ? tw`right-[-10px]`
+      ? tw`right-[-12px]`
       : tw`relative`}
 
     @media (max-width: 860px) {
@@ -143,12 +143,12 @@ const ProfessionalBox = styled.div<{ index: number }>`
 		${tw`p-[40px] max-w-full`}
 	}
 	@media (max-width: 480px) {
-		${tw`p-[30px]`}
+		${tw`p-[30px] w-[380px]`}
 	}
 `;
 
 const ProfessionalImage = styled.img`
-    ${tw`block mt-[17px] mx-auto w-[146px] h-[146px] mb-[3.3rem]`}
+    ${tw`block mt-[91px] mx-auto w-[146px] h-[146px] mb-[3.3rem]`}
 
     @media (max-width: 1024px) {
 		${tw`w-[160px] h-[160px] mt-0 mb-[20px]`}
@@ -221,9 +221,16 @@ const ProfessionalDesc = styled.p`
 `
 
 const SocialsWrapper = styled.div`
-    ${tw`flex w-[73%] gap-[3px]`}
+    ${tw`flex w-[67%] gap-[3px]`}
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 76px;
+
+    @media (min-width: 1441px) and (max-width: 2560px) {
+        ${tw`w-[33%]`}
+    }
+    @media (max-width: 1440px) {
+    }
 
     @media (max-width: 1280px) {
     ${tw`w-full gap-0`}
@@ -237,6 +244,9 @@ const SocialsWrapper = styled.div`
 
 const SocialIcon = styled.img`
     ${tw`h-20`}
+    @media (max-width: 900px) {
+        ${tw`max-w-[30%]`}
+    }
     @media (max-width: 770px) {
         ${tw`max-w-[35%]`}
     }

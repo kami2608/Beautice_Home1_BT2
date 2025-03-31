@@ -39,9 +39,9 @@ const FormRow = styled.div`
 		}
 	}
 	@media (max-width: 768px) {
-		${tw`flex-col gap-3`}
+		${tw`flex-col gap-[2rem]`}
 		.first-name, .last-name {
-			${tw`w-full min-w-full py-2`}
+			${tw`w-full h-16 min-w-full py-[1.2rem] px-[18px] text-[14px]`}
 		}
 		.last-name {
 			${tw`left-0`}

@@ -103,7 +103,7 @@ const BoxesWrapper = styled.div`
 	padding: 0 198px;
 	grid-template-columns: repeat(3, 1fr);
 	@media (max-width: 1440px) {
-		${tw`top-[31px] gap-[50px] py-0 px-[150px]`}
+		${tw`top-[31px] gap-[55px] py-0 px-[150px]`}
 	}
 	@media (max-width: 1130px) {
 		${tw`py-0 px-[50px]`}
@@ -122,14 +122,14 @@ const BoxesWrapper = styled.div`
 const ServiceBox = styled.div`
 	${tw`relative flex-1 text-center p-[41px] max-w-[500px] bg-white rounded-[40px]`}
 	box-shadow: 0px 25px 50px 25px #F6F7FF;
-    	@media (max-width: 1440px) {
+    @media (max-width: 1440px) {
 		${tw`p-[30px]`}
 	}
 	@media (max-width: 860px) {
 		${tw`p-[25px]`}
 	}
 	@media (max-width: 768px) {
-		${tw`p-[40px] max-w-full`}
+		${tw`p-[40px] min-h-[300px] w-[380px]`}
 	}
 	@media (max-width: 480px) {
 		${tw`p-[30px]`}
@@ -137,9 +137,9 @@ const ServiceBox = styled.div`
 `
 
 const ServiceImage = styled.img`
-	${tw`block mt-[17px] mx-auto w-[220px] h-[220px] mb-12`}
+	${tw`block mt-[17px] mx-auto mb-12`}
 	@media (max-width: 1440px) {
-		${tw`w-[164px] mt-[6px] mb-[28px]`}
+		${tw`w-[164px] mt-[33px] mb-[58px]`}
 	}
 	@media (max-width: 1024px) {
 		${tw`w-[160px] h-[160px] mt-0 mb-[20px]`}
